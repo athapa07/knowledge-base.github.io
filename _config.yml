@@ -35,7 +35,7 @@ round-avatar: true
 social-network-links:
   email: "anilthapa07@outlook.com"
   github: athapa07
-  linkedin: "https://www.linkedin.com/in/anil-thapa-33a204114/"
+  linkedin: "/anil-thapa-33a204114/"
 
 ###########################
 # --- General options --- #
@@ -44,7 +44,7 @@ social-network-links:
 share-links-active:
   twitter: false
   facebook: false
-  linkedin: true
+  linkedin: false
   vk: false
   reddit: false
 
