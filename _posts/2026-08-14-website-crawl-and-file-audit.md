@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Website Crawl & File Audit
+title: HTTrack - Website Crawl & File Audit
 subtitle: Counting pages, PDFs, and images on any site with free, unlimited tools
-tags: [tools, seo, cli]
+tags: [tools, seo, cli, HTTrack]
 author: Anil Thapa
 ---
 
