@@ -2,7 +2,7 @@
 layout: post
 title: Drupal Webform → Dataverse
 subtitle: Getting Drupal Webform submissions into a Power Platform Dataverse table, with an email-based fallback
-tags: [tools, power-platform, dataverse, power-automate, drupal, integration]
+tags: [tools, power-platform, dataverse, power-automate, drupal, integration, webfrom, email handler]
 author: Anil Thapa
 ---
 
@@ -360,16 +360,6 @@ Every submission should produce one row in `Contact - Drupal`. Worth spot-checki
 - Do `preferred_method_of_contact` values resolve to the right Choice label?
 - Did any failure-notification emails fire from the Path B catch branch?
 
-## Sample Results
-
-| Metric | Value |
-|---|---|
-| Submissions tested | 12 |
-| Delivered via HTTP path | 10 |
-| Delivered via email fallback | 2 |
-| Failed / dropped | 0 |
-
-<!-- image: screenshot of populated Dataverse rows -->
 
 ## Caveats
 
