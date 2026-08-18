@@ -40,11 +40,10 @@ The webform itself has two submission handlers attached, which is really the hea
 
 **Handler 1 — Remote HTTP Operations** (enabled). Fires on `completed`, method `POST`, payload type JSON. It posts to a Power Automate HTTP trigger URL and explicitly excludes a long list of internal Webform bookkeeping fields (`uuid`, `token`, `uri`, `completed`, `changed`, `in_draft`, `current_page`, `uid`, `langcode`, `entity_type`, `entity_id`, `locked`, `sticky`, `notes`, `metatag`) so only the meaningful submission data goes out.
 
-[/assets/img/Handler 1 — Remote HTTP Operations.png]
+![Handler 1 — Remote HTTP Operations](https://athapa07.github.io/knowledge-base.github.io/assets/img/Handler 1 — Remote HTTP Operations.png)
 **Handler 2 — Email** (currently disabled, kept as a fallback mechanism). Also fires on `completed`. Rather than sending a human-readable notification, its body is a Twig template that JSON-encodes the *entire* submission — `sid`, `serial`, `webform_id`, `created`, `remote_addr`, `langcode`, and a nested `data` object with the four field values — and renders that as HTML in the email body. Effectively, this handler turns an email into a second transport for the exact same payload the HTTP handler sends, just wrapped in an inbox instead of a POST request.
 
-[/assets/img/Handler 2 — Email.png]
-
+![Handler 2 - Email](https://athapa07.github.io/knowledge-base.github.io/assets/img/Handler 2 — Email.png)
 <!-- image: screenshot of the Webform's handler configuration in Drupal -->
 
 
