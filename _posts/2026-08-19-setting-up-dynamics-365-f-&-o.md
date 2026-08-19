@@ -81,7 +81,7 @@ I used **UTM** for this:
 ### Fixing networking inside the VM
 
 After installation, networking may not work out of the box inside the VM. If that happens, install the missing network driver and restart the VM — it resolves the connectivity issue.
-<!-- https://snapshot.opc.com.au/hBcdTf7G -->
+For reference: [https://snapshot.opc.com.au/hBcdTf7G](https://snapshot.opc.com.au/hBcdTf7G)
 
 ### Installing the tooling inside the VM
 
