@@ -3,7 +3,7 @@ layout: post
 title: Setting Up a Dynamics 365 Finance & Operations Dev Environment
 subtitle: From an empty Microsoft 365 tenant to a working F&O sandbox, with a Windows VM for the tooling that won't run on a Mac
 tags: [tools, power-platform, dynamics-365, dataverse, azure, microsoft-365, finance-and-operations, vm]
-author: Your Name
+author: Anil Thapa
 ---
 
 # Setting Up a Dynamics 365 Finance & Operations Dev Environment: A Step-by-Step Walkthrough
