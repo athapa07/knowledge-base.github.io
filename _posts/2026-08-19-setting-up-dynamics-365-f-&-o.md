@@ -18,7 +18,7 @@ Everything starts with a tenant. I signed up for a **Microsoft 365 Business Basi
 
 > **Tip:** Once the trial is active, go into billing settings and turn **auto-renew off** immediately. This stops you from being silently charged once the trial period ends.
 
-https://snapshot.opc.com.au/BkY2HnFs
+<!-- https://snapshot.opc.com.au/BkY2HnFs -->
 
 ## 2. Activate the Dynamics 365 Finance Premium License
 
@@ -26,18 +26,18 @@ With the tenant in place, activate a **Dynamics 365 Finance Premium** trial lice
 
 Same rule applies here — once the trial is active, switch **auto-renew off** so it doesn't convert into a paid subscription automatically.
 
-https://snapshot.opc.com.au/smfv06Dp
+<!-- https://snapshot.opc.com.au/smfv06Dp -->
 ## 3. Create an Azure Account (Free $200 Credit)
 
 F&O environments run on Azure infrastructure under the hood, so you'll need an Azure subscription linked to the same tenant. Signing up as a new Azure customer gets you a **$200 free credit** for the first 30 days, which is more than enough to get a sandbox running and tested.
 
-https://snapshot.opc.com.au/M78t6nbP
+<!-- https://snapshot.opc.com.au/M78t6nbP -->
 
 ## 4. Link the Azure Subscription in the Power Platform Admin Center
 
 This is the step that ties Microsoft 365, Dynamics 365, and Azure together. In the **Power Platform Admin Center**, link your Azure subscription so that Dataverse capacity and environments can be billed against it.
 
-https://snapshot.opc.com.au/x8mJj0rf
+<!-- https://snapshot.opc.com.au/x8mJj0rf -->
 
 ## 5. Create a Dataverse Billing Plan
 
@@ -81,7 +81,7 @@ I used **UTM** for this:
 ### Fixing networking inside the VM
 
 After installation, networking may not work out of the box inside the VM. If that happens, install the missing network driver and restart the VM — it resolves the connectivity issue.
-https://snapshot.opc.com.au/hBcdTf7G
+<!-- https://snapshot.opc.com.au/hBcdTf7G -->
 
 ### Installing the tooling inside the VM
 
