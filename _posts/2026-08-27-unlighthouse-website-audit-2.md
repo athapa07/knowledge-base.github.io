@@ -299,7 +299,7 @@ node average-score.js
 cat .unlighthouse/reports/lighthouse.json | node -e "const d=JSON.parse(require('fs').readFileSync(0,'utf-8')); const r=d.report||d.lhr||d; console.log(r.categories.seo.score * 100)"
 ```
 ## Working File
-[Downlaodable setup](https://athapa07.github.io/knowledge-base.github.io/assets/files/unlighhouse.zip)
+[Downloadable setup](https://athapa07.github.io/knowledge-base.github.io/assets/files/unlighhouse.zip)
 
 
 ## Caveats
