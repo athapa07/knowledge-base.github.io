@@ -301,6 +301,16 @@ cat .unlighthouse/reports/lighthouse.json | node -e "const d=JSON.parse(require(
 ## Working File
 [Downloadable setup](https://athapa07.github.io/knowledge-base.github.io/assets/files/unlighhouse.zip)
 
+Run using:
+```
+ node extract-performance-issues.js
+ node average-score.js
+ node extract-seo-issues.js
+ node extract-bp-issues.js
+ cat accessibility-issues.csv
+
+```
+
 
 ## Caveats
 
