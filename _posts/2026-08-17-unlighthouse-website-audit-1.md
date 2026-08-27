@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unlighthouse - Website Performance & SEO Audit 
+title: Unlighthouse - Website Performance & SEO Audit -- 1
 subtitle: Scanning every page on a site for Lighthouse scores using a free, npm-based tool
 tags: [tools, seo, cli, performance, unlighthouse]
 author: Anil Thapa
