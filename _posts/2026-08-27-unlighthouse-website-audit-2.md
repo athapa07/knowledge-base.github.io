@@ -6,7 +6,7 @@ tags: [tools, seo, cli, performance, accessibility, unlighthouse]
 author: Anil Thapa
 ---
 
-Follow-up to [Part 1](https://athapa07.github.io/knowledge-base.github.io/2026-08-17-unlighthouse-website-audit/), which covered installing Unlighthouse and running a basic full-site scan. This post covers the workflow for turning a scan into something you can actually hand to a client: scanning one category at a time, extracting only the failing issues into a CSV, checking page counts and scores, and writing up the results without the report looking self-contradictory.
+Follow-up to [Part 1](https://athapa07.github.io/knowledge-base.github.io/2026-08-17-unlighthouse-website-audit-1/), which covered installing Unlighthouse and running a basic full-site scan. This post covers the workflow for turning a scan into something you can actually hand to a client: scanning one category at a time, extracting only the failing issues into a CSV, checking page counts and scores, and writing up the results without the report looking self-contradictory.
 
 ## Tools Used
 
