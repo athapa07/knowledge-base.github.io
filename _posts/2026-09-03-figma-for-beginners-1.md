@@ -1,11 +1,10 @@
 ---
-
 layout: post
 title: Figma Shortcuts and Notes from the Figma Design for Beginners Course
 subtitle: A running reference of useful shortcuts, layout concepts, components, and settings
 tags: [tools, figma, design, ui, ux]
 author: Anil Thapa
-------------------
+---
 
 # Figma Shortcuts and Notes from the Figma Design for Beginners Course
 
