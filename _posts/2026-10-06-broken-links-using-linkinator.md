@@ -10,6 +10,12 @@ A quick reference for finding broken links on any website (or local build) using
 
 > **How to use this page:** every command you need to copy is marked with **▶ RUN** above its code block. Skim for those.
 
+## Table of Contents
+{: .no_toc}
+
+* TOC
+{:toc}
+
 ## Tools Used
 
 - **[Linkinator](https://github.com/JustinBeckwith/linkinator)** (installed via [npm](https://www.npmjs.com/package/linkinator)) — free, open-source, no URL cap. Crawls a site and checks every link, image, script, and stylesheet.
