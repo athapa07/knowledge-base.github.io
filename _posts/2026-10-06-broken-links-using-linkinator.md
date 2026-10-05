@@ -136,6 +136,58 @@ jq '.links[] | select(.status==500)' report.json
 jq '[.links[] | select(.state=="BROKEN")] | group_by(.status) | map({status: .[0].status, count: length})' report.json
 ```
 
+## ⭐ Download All Broken Links to Excel
+
+> **📥 Want a spreadsheet of every broken link? Run these two commands.** The result is a file you can open in Excel, Numbers, or Google Sheets, with one row per broken link and the page it lives on.
+
+**▶ RUN** Step 1: scan the site and save the report (skip if you already have `report.json`):
+
+```bash
+linkinator https://example.com --recurse --retry --concurrency 10 --timeout 20000 --format json > report.json
+```
+
+**▶ RUN** Step 2: export **all broken links** (404 and every other code) to an Excel-ready file:
+
+```bash
+printf '\xEF\xBB\xBF' > broken-links.csv
+jq -r '["Status","Broken URL","Found on page"], (.links[] | select(.state=="BROKEN") | [.status,.url,.parent]) | @csv' report.json >> broken-links.csv
+```
+
+The first line writes a UTF-8 marker so Excel displays special characters correctly. The second line appends the data.
+
+**▶ RUN** Step 3: open it in Excel (macOS):
+
+```bash
+open -a "Microsoft Excel" broken-links.csv
+```
+
+On Windows, double-click `broken-links.csv`.
+
+### Want a real `.xlsx` file instead?
+
+**▶ RUN** one-time install:
+
+```bash
+pip3 install pandas openpyxl
+```
+
+**▶ RUN** convert the report into a sorted `.xlsx` with all broken links:
+
+```bash
+python3 -c "
+import json, pandas as pd
+d = json.load(open('report.json'))
+rows = [{'Status': l['status'], 'Broken URL': l['url'], 'Found on page': l.get('parent','')} for l in d['links'] if l['state']=='BROKEN']
+pd.DataFrame(rows).sort_values(['Status','Found on page']).to_excel('broken-links.xlsx', index=False)
+print(len(rows), 'broken links saved to broken-links.xlsx')
+"
+```
+
+**Tips:**
+- Sort or filter the **Status** column in Excel to view only 404s, or everything else.
+- The **Found on page** column tells you where to go and fix each link.
+- Only the **Status 0** rows have no real HTTP code, so check those URLs for typos.
+
 ## Reading the Report
 
 Each entry in the report looks like this:
@@ -243,6 +295,7 @@ linkinator ./docs --recurse --markdown --format json > report.json
 | Only 404s | `jq '.links[] \| select(.status==404)' report.json` |
 | All broken except 404 | `jq '.links[] \| select(.state=="BROKEN" and .status!=404)' report.json` |
 | All broken | `jq '.links[] \| select(.state=="BROKEN")' report.json` |
+| All broken to Excel | `printf '\xEF\xBB\xBF' > broken-links.csv && jq -r '["Status","Broken URL","Found on page"], (.links[] \| select(.state=="BROKEN") \| [.status,.url,.parent]) \| @csv' report.json >> broken-links.csv` |
 | Count by status | `jq '[.links[] \| select(.state=="BROKEN")] \| group_by(.status) \| map({status: .[0].status, count: length})' report.json` |
 
 ## Other Free Options (No Sign-Up)
